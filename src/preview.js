@@ -31,18 +31,18 @@ export default function Preview( { countryCode, relatedPosts } ) {
 					{ hasRelatedPosts ? sprintf( __( 'There are %d related posts:' ), relatedPosts.length ) : __( 'There are no related posts.' ) }
 				</h3>
 				{ hasRelatedPosts && (
-					<ul className="xwp-country-card__related-posts-list">
+					<ul className="xwp-country-card__related-posts__list">
 						{ relatedPosts.map( ( relatedPost, index ) => (
-							<li key={ index } className="related-post">
+							<li key={ index } className="xwp-country-card__related-post">
 									<a
-										className="link"
+										className="xwp-country-card__related-post__link"
 										href={ relatedPost.link }
 										data-post-id={ relatedPost.id }
 									>
-										<h3 className="title">
+										<h3 className="xwp-country-card__related-post__title">
 											{ relatedPost.title }
 										</h3>
-										<p className="excerpt">
+										<p className="xwp-country-card__related-post__excerpt">
 											{ relatedPost.excerpt }
 										</p>
 									</a>
